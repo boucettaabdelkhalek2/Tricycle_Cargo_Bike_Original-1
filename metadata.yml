@@ -1,9 +1,20 @@
-documentation_language: ar-en
-documentation_readiness_level: 3
-function: "Cargo transport using a human-powered tricycle"
-image: images/main-view.jpg
-license: CERN-OHL-S-2.0
-project_link: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original
-release_status: released
-title: Tricycle Cargo Bike
-type: project
+cat > metadata.yml <<EOF
+okh-manifest-version: 1.0.0
+project:
+  name: Tricycle Cargo Bike
+  description: دراجة ثلاثية لنقل البضائع - مفتوحة المصدر مع ملفات التصميم، دليل التجميع، و BOM.
+  version: 1.0.0
+  license: CERN-OHL-2.0
+  authors:
+    - name: Abdelkhalek Boucetta
+      email: boucettaabdelkhalek25@gmail.com
+  repository: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1
+  documentation-home: ./index.html
+  assets:
+    cad: ./CAD/
+    bom: ./BOM/
+    drawings: ./docs/Technical_Drawings.pdf
+    assembly-instructions: ./docs/Assembly_Instructions.pdf
+    user-manual: ./docs/User_Manual.pdf
+    media: ./images/
+EOF
