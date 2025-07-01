@@ -1,4 +1,3 @@
-cat > README.md <<EOF
 # 🚲 Tricycle Cargo Bike (Open Source Project)
 
 مشروع دراجة ثلاثية العجلات للنقل الحضري – مفتوح المصدر ومبني على الاستدامة.
@@ -20,4 +19,3 @@ CERN-OHL v2
 ## ✉️ التواصل:
 مالك المشروع: Abdelkhalek Boucetta  
 GitHub: [boucettaabdelkhalek2](https://github.com/boucettaabdelkhalek2)
-EOF
