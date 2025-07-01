@@ -43,3 +43,4 @@ Licensed under **CERN-OHL-S v2** – Free to use, modify, and distribute.
 ## 🤝 Contribute – المساهمة
 
 هل لديك فكرة أو تعديل؟ مرحبًا بك! افتح طلب دمج (Pull Request) أو تواصل معي.
+![Build Status](https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1/actions/workflows/build-check.yml/badge.svg)
