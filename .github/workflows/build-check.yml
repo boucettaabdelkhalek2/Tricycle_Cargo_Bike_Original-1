@@ -1,18 +1,45 @@
-okh-manifest-version: 1.0.0
-project:
-  name: Tricycle Cargo Bike
-  description: دراجة ثلاثية لنقل البضائع - مفتوحة المصدر مع ملفات التصميم، دليل التجميع، و BOM.
-  version: 1.0.0
-  license: CERN-OHL-2.0
-  authors:
-    - name: Abdelkhalek Boucetta
-      email: boucettaabdelkhalek25@gmail.com
-  repository: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1
-  documentation-home: ./index.html
-  assets:
-    cad: ./CAD/
-    bom: ./BOM/
-    drawings: ./docs/Technical_Drawings.pdf
-    assembly-instructions: ./docs/Assembly_Instructions.pdf
-    user-manual: ./docs/User_Manual.pdf
-    media: ./images/
+name: Validate Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    name: Structure and File Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate metadata.yml
+        run: |
+          python3 -c "import yaml; yaml.safe_load(open('metadata.yml'))"
+
+      - name: Check essential files
+        run: |
+          for file in README.md LICENSE metadata.yml index.html; do
+            if [ ! -f "$file" ]; then echo "❌ Missing: $file" && exit 1; fi
+          done
+
+      - name: List CAD files
+        run: find CAD -type f
+
+      - name: List PDF documents
+        run: find docs -name '*.pdf'
+
+      - name: Show images and videos
+        run: |
+          find images -type f
+          find videos -type f
+
+      - name: Validate HTML file (web/index.html)
+        run: test -f web/index.html || (echo "Missing web/index.html" && exit 1)
