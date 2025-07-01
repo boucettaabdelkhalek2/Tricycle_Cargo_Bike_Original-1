@@ -42,4 +42,4 @@ jobs:
           find videos -type f
 
       - name: Validate HTML file (web/index.html)
-        run: test -f web/index.html || (echo "Missing web/index.html" && exit 1)
+        run: test -f "web/index.html" || (echo "Missing web/index.html" && exit 1)
