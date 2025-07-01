@@ -18,6 +18,6 @@ cat > README.md <<EOF
 CERN-OHL v2
 
 ## ✉️ التواصل:
-مالك المشروع: Abdelkhalek Bousta  
+مالك المشروع: Abdelkhalek Boucetta  
 GitHub: [boucettaabdelkhalek2](https://github.com/boucettaabdelkhalek2)
 EOF
