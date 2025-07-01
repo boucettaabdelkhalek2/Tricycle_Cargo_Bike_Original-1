@@ -1,0 +1,11 @@
+# cert/TSDC-certificate.yml
+certificate:
+  id: TSDC-2025-0001
+  standard: DIN SPEC 3105
+  level: "Documentation Level 1 - Full Documentation"
+  language: "Arabic / English"
+  issued_to: "Abdelkhalek Bousta"
+  project: "Tricycle Cargo Bike"
+  date: 2025-06-29
+  license: CERN-OHL-S v2
+  url: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original

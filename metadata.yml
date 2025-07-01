@@ -1,0 +1,9 @@
+documentation_language: ar-en
+documentation_readiness_level: 3
+function: "Cargo transport using a human-powered tricycle"
+image: images/main-view.jpg
+license: CERN-OHL-S-2.0
+project_link: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original
+release_status: released
+title: Tricycle Cargo Bike
+type: project

@@ -1,0 +1,15 @@
+# DIN3501-checklist.yml
+standard: DIN SPEC 3501
+compliance: true
+criteria:
+  - metadata_file: true
+  - CAD_files: true
+  - BOM: true
+  - build_instructions: true
+  - license_file: true
+  - open_license_used: CERN-OHL-S
+  - contact_info: true
+  - testing_and_validation: true
+  - file_formats_open: true
+  - community_contribution: true
+  - project_language: Arabic / English
