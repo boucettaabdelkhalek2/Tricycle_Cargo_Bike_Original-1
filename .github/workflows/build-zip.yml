@@ -1,0 +1,24 @@
+name: Generate ZIP Archive
+
+on:
+  push:
+    tags:
+      - 'v*'  # عند أي إصدار يبدأ بـ v مثل v1.0
+
+jobs:
+  build-zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: 🗃️ Compress Repository into ZIP
+        run: |
+          zip -r Tricycle_Cargo_Bike_Original-1.zip . -x ".git/*"
+
+      - name: 🚀 Upload ZIP as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Tricycle_Cargo_Bike_Original-1
+          path: Tricycle_Cargo_Bike_Original-1.zip
