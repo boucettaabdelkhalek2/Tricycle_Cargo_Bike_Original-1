@@ -1,15 +1,59 @@
-# DIN3501-checklist.yml
-standard: DIN SPEC 3501
-compliance: true
-criteria:
-  - metadata_file: true
-  - CAD_files: true
-  - BOM: true
-  - build_instructions: true
-  - license_file: true
-  - open_license_used: CERN-OHL-S
-  - contact_info: true
-  - testing_and_validation: true
-  - file_formats_open: true
-  - community_contribution: true
-  - project_language: Arabic / English
+project_name: Tricycle Cargo Bike
+project_version: 1.0
+project_repository: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1
+compliance_standard: DIN SPEC 3501
+assessment_date: 2025-07-02
+assessor: Abdelkhalek Bousta
+
+checklist:
+  - section: General Project Structure
+    items:
+      - item: README file present
+        status: ✅
+      - item: LICENSE file present
+        status: ✅
+      - item: metadata.yml present
+        status: ✅
+      - item: Clear folder structure
+        status: ✅
+
+  - section: Documentation
+    items:
+      - item: User manual available
+        status: ✅
+      - item: Assembly instructions available
+        status: ✅
+      - item: Technical drawings included
+        status: ✅
+      - item: Bill of materials (BOM) included
+        status: ⚠️ (لم يتم تقديم BOM بشكل منفصل، يوصى بإضافته)
+
+  - section: CAD Files
+    items:
+      - item: Source files in open format (STEP, DXF)
+        status: ✅
+      - item: All parts are represented
+        status: ✅
+
+  - section: Licensing and Openness
+    items:
+      - item: License is OSHWA-compliant (CERN-OHL)
+        status: ✅
+      - item: All source files included
+        status: ✅
+
+  - section: Community and Access
+    items:
+      - item: Public repository (GitHub)
+        status: ✅
+      - item: GitHub Actions or CI
+        status: ✅
+      - item: GitHub Pages or visual documentation
+        status: ✅
+
+summary:
+  overall_status: 95% Compliant
+  recommendations:
+    - Add a detailed BOM file in CSV/Markdown format.
+    - Add images or renders of the final product in README or /docs/.
+    - Tag a stable version as `v1.0`.
