@@ -3,7 +3,7 @@ project_version: 1.0
 project_repository: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1
 compliance_standard: DIN SPEC 3501
 assessment_date: 2025-07-02
-assessor: Abdelkhalek Bousta
+assessor: Abdelkhalek Boucetta
 
 checklist:
   - section: General Project Structure
