@@ -1,46 +1,63 @@
+name: Validate Project Structure
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tricycle Cargo Bike - Open Source Project</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f8f9fa; margin: 0; padding: 2em; color: #333; }
-    .container { max-width: 800px; margin: auto; background: #fff; padding: 2em; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    h1 { color: #2c3e50; }
-    h2 { color: #34495e; margin-top: 1.5em; }
-    ul { line-height: 1.6; }
-    a { color: #2980b9; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Tricycle Cargo Bike</h1>
-    <p>This open-source project documents the design and manufacturing process of a tricycle cargo bike suitable for urban and rural freight transportation.</p>
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-    <h2>Technical Specifications</h2>
-    <ul>
-      <li><strong>Max Load Capacity:</strong> 150 kg</li>
-      <li><strong>Number of Wheels:</strong> 3 (26 inches each)</li>
-      <li><strong>Frame Material:</strong> Steel</li>
-      <li><strong>Cargo Box:</strong> Front-mounted, made of wood</li>
-      <li><strong>License:</strong> CC-BY-SA 4.0</li>
-    </ul>
+jobs:
+  validate:
+    name: Full Validation
+    runs-on: ubuntu-latest
 
-    <h2>Download Documentation</h2>
-    <ul>
-      <li><a href="tricycle-cargo-bike-doc-ar.pdf">Arabic Documentation (PDF)</a></li>
-      <li><a href="tricycle-cargo-bike-doc-en.pdf">English Documentation (PDF)</a></li>
-    </ul>
+    steps:
+      - name: 🔄 Checkout Repository
+        uses: actions/checkout@v4
 
-    <h2>Media</h2>
-    <p><img src="media/diagram.png" alt="Bike Diagram" style="max-width:100%; border-radius: 6px;"></p>
-    <p><a href="https://www.youtube.com/watch?v=uaYSFW8OWf8" target="_blank">Watch Assembly Video</a></p>
+      - name: 🛠 Install PyYAML
+        run: pip install pyyaml
 
-    <h2>Author</h2>
-    <p>Designed by A. Pardo | Open Hardware Observatory (OHO)</p>
-  </div>
-</body>
-</html>
+      - name: 📄 Validate metadata.yml
+        run: |
+          python3 -c "import yaml; yaml.safe_load(open('metadata.yml'))"
+
+      - name: 📦 Check Essential Files
+        run: |
+          for file in README.md LICENSE metadata.yml; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Missing: $file"
+              exit 1
+            fi
+          done
+          # التحقق من index.html داخل مجلد web
+          if [ ! -f "web/index.html" ]; then
+            echo "❌ Missing: web/index.html"
+            exit 1
+          fi
+
+      - name: 🧱 List CAD Files
+        run: |
+          echo "📂 CAD files:"
+          find CAD -type f || echo "No CAD folder found."
+
+      - name: 📑 List PDF Documents
+        run: |
+          echo "📂 PDF files in docs/:"
+          find docs -name '*.pdf' || echo "No PDF files found."
+
+      - name: 🖼 Show Images and Videos
+        run: |
+          echo "🖼 Images:"
+          find images -type f || echo "No images found."
+          echo "🎥 Videos:"
+          find videos -type f || echo "No videos found."
+
+      - name: 🌐 Validate Web Page
+        run: |
+          if [ -f "web/index.html" ]; then
+            echo "✅ web/index.html found."
+          else
+            echo "❌ web/index.html is missing."
+            exit 1
+          fi
