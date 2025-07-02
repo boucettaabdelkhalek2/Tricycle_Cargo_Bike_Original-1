@@ -1,46 +1,48 @@
-![Build Status](https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1/actions/workflows/build-check.yml/badge.svg)
-# 🚲 Tricycle Cargo Bike – دراجة نقل ثلاثية مفتوحة المصدر
+# 🚲 Tricycle Cargo Bike
 
-**مفتوح المصدر | سهل التصنيع | مستدام بيئيًا**
+[![License: CERN-OHL-S-2.0](https://img.shields.io/badge/license-CERN--OHL--S--2.0-blue.svg)](LICENSE)
+[![Build Status](https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1/actions/workflows/build-check.yml/badge.svg)](https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1/actions)
+[![DIN SPEC 3501](https://img.shields.io/badge/DIN_SPEC-3501-green)](#)
 
-## 🧭 Overview – نظرة عامة
+## 🔧 نظرة عامة
+مشروع دراجة شحن ثلاثية العجلات مصمم باستخدام أدوات مفتوحة المصدر، يمكن إنتاجه محليًا باستخدام تقنيات التصنيع الرقمي مثل القطع بالليزر والـ CNC.
 
-The **Tricycle Cargo Bike** is an open-source vehicle designed for transporting goods in urban and rural areas. It is built with simplicity, durability, and local manufacturability in mind.
+## 📁 محتويات المشروع
+- ملفات CAD مفتوحة (`STEP`, `DXF`)
+- تعليمات التجميع
+- دليل الاستخدام
+- رسومات تقنية
+- رخصة CERN-OHL
+- metadata لـ Open Know-How
 
-دراجة ثلاثية لنقل البضائع، مصممة لتكون صديقة للبيئة، قابلة للتصنيع محليًا، وسهلة الاستخدام في المدن والقرى.
+## 📦 كيفية البناء
+1. اطبع الأجزاء من ملفات `.dxf`
+2. اتبع التعليمات في `docs/Assembly_Instructions.pdf`
+3. اجمع الإطار باستخدام البراغي والأنابيب
+4. اختبر الدراجة 🚴‍♂️
 
----
+## 🧰 المتطلبات
+- آلة CNC أو قطع ليزر
+- أدوات ميكانيكية بسيطة
+- دراية بالتصميم أو اطبع مباشرة
 
-## 📂 Project Structure – بنية المشروع
+## 📸 صور المنتج
+*يرجى إضافة صورة المنتج النهائي هنا (JPEG أو PNG)*
 
-- `wiki/`: ملفات التوثيق التفصيلية (Markdown)
-- `CAD/`: تصاميم هندسية مفتوحة المصدر
-- `BOM/`: قائمة المكونات (Bill of Materials)
-- `cert/`: شهادة TSDC ومعايير الجودة
-- `web/`: واجهة HTML للمشروع (GitHub Pages)
-- `images/`: صور توضيحية
-- `firmware/`: برمجيات المتحكمات (إن وجدت)
-- `software/`: أدوات برمجية مساعدة
+## 🧾 BOM (قائمة المواد)
+*يرجى إضافة ملف BOM في مجلد `docs/BOM.csv` أو Markdown*
 
----
+## 🌐 الموقع / المعاينة
+- [📄 صفحة المشروع على GitHub Pages](https://boucettaabdelkhalek2.github.io/Tricycle_Cargo_Bike_Original-1/index.html)
 
-## 📜 License – الرخصة
+## 🏷️ الإصدار
+- الإصدار الحالي: `v1.0`
+- تم إنشاؤه يوم: `2025-07-02`
 
-Licensed under **CERN-OHL-S v2** – Free to use, modify, and distribute.
+## 🤝 كيفية المساهمة
+- قم بعمل Fork
+- أنشئ فرعًا جديدًا
+- قدم Pull Request بعد التعديلات
 
-مرخص بموجب **CERN-OHL-S v2**، يمكنك استخدامه وتعديله ونشره بحرية.
-
----
-
-## 🌐 Resources – روابط مهمة
-
-- 🔗 [صفحة المشروع على Wiki](https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original/wiki)
-- 🔗 [عرض HTML مباشر](https://boucettaabdelkhalek2.github.io/Tricycle_Cargo_Bike_Original/web/)
-- 📄 [شهادة TSDC](./cert/TSDC-certificate.yml)
-- 📄 [تقرير DIN 3501](./DIN3501-checklist.yml)
-
----
-
-## 🤝 Contribute – المساهمة
-
-هل لديك فكرة أو تعديل؟ مرحبًا بك! افتح طلب دمج (Pull Request) أو تواصل معي.
+## 📜 الترخيص
+مرخص بموجب [CERN-OHL-S v2.0](LICENSE)
