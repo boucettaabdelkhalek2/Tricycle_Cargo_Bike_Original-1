@@ -1,63 +1,106 @@
-name: Validate Project Structure
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tricycle Cargo Bike – Open Source Project</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #00695c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #00796b;
+    }
+    a {
+      color: #00695c;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn {
+      background: #00796b;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    footer {
+      background: #eeeeee;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tricycle Cargo Bike</h1>
+    <p>An open-source sustainable transport solution</p>
+  </header>
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  <main>
+    <section>
+      <h2>🛠️ Project Overview</h2>
+      <p>
+        This project provides complete open documentation to build a
+        tricycle cargo bike. It includes CAD files, BOM, manuals,
+        technical drawings, certifications, and more.
+      </p>
+      <a class="btn" href="https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1" target="_blank">🔗 View on GitHub</a>
+    </section>
 
-jobs:
-  validate:
-    name: Full Validation
-    runs-on: ubuntu-latest
+    <section>
+      <h2>📂 Key Downloads</h2>
+      <ul>
+        <li><a href="../docs/User_Manual.pdf" target="_blank">User Manual (PDF)</a></li>
+        <li><a href="../docs/Assembly_Instructions.pdf" target="_blank">Assembly Instructions (PDF)</a></li>
+        <li><a href="../docs/Technical_Drawings.pdf" target="_blank">Technical Drawings (PDF)</a></li>
+        <li><a href="../CAD/Assembly1.stp" target="_blank">Assembly CAD (STP)</a></li>
+        <li><a href="../BOM/bom.csv" target="_blank">Bill of Materials (CSV)</a></li>
+        <li><a href="../cert/TSDC-certificate.yml" target="_blank">TSDC Certificate (YML)</a></li>
+      </ul>
+    </section>
 
-    steps:
-      - name: 🔄 Checkout Repository
-        uses: actions/checkout@v4
+    <section>
+      <h2>📸 Gallery</h2>
+      <img src="../images/photo1.jpg" alt="Photo 1" width="300" style="margin-right: 1rem;">
+      <img src="../images/photo2.jpg" alt="Photo 2" width="300">
+    </section>
 
-      - name: 🛠 Install PyYAML
-        run: pip install pyyaml
+    <section>
+      <h2>🔎 OKH Metadata</h2>
+      <p><a href="../okh-manifest.yml" target="_blank">View Open Know-How Metadata</a></p>
+    </section>
+  </main>
 
-      - name: 📄 Validate metadata.yml
-        run: |
-          python3 -c "import yaml; yaml.safe_load(open('metadata.yml'))"
-
-      - name: 📦 Check Essential Files
-        run: |
-          for file in README.md LICENSE metadata.yml; do
-            if [ ! -f "$file" ]; then
-              echo "❌ Missing: $file"
-              exit 1
-            fi
-          done
-          # التحقق من index.html داخل مجلد web
-          if [ ! -f "web/index.html" ]; then
-            echo "❌ Missing: web/index.html"
-            exit 1
-          fi
-
-      - name: 🧱 List CAD Files
-        run: |
-          echo "📂 CAD files:"
-          find CAD -type f || echo "No CAD folder found."
-
-      - name: 📑 List PDF Documents
-        run: |
-          echo "📂 PDF files in docs/:"
-          find docs -name '*.pdf' || echo "No PDF files found."
-
-      - name: 🖼 Show Images and Videos
-        run: |
-          echo "🖼 Images:"
-          find images -type f || echo "No images found."
-          echo "🎥 Videos:"
-          find videos -type f || echo "No videos found."
-
-      - name: 🌐 Validate Web Page
-        run: |
-          if [ -f "web/index.html" ]; then
-            echo "✅ web/index.html found."
-          else
-            echo "❌ web/index.html is missing."
-            exit 1
-          fi
+  <footer>
+    &copy; 2025 Abdelkhalek Boucetta – Open Design Collective | License: CERN-OHL-S
+  </footer>
+</body>
+</html>
