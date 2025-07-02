@@ -1,106 +1,35 @@
+<!-- web/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tricycle Cargo Bike – Open Source Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tricycle Cargo Bike – دراجة نقل مفتوحة المصدر</title>
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #00695c;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: #00796b;
-    }
-    a {
-      color: #00695c;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .btn {
-      background: #00796b;
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    footer {
-      background: #eeeeee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
+    body { font-family: Tahoma, sans-serif; background: #f9f9f9; margin: 2rem; color: #333; direction: rtl; }
+    h1, h2 { color: #006699; }
+    a { color: #006699; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .section { margin-bottom: 2rem; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Tricycle Cargo Bike</h1>
-    <p>An open-source sustainable transport solution</p>
-  </header>
+  <h1>🚲 Tricycle Cargo Bike</h1>
+  <p>مشروع مفتوح المصدر لدراجة ثلاثية لنقل البضائع، مصمم ليكون مستدامًا، عمليًا، وسهل التصنيع محليًا.</p>
 
-  <main>
-    <section>
-      <h2>🛠️ Project Overview</h2>
-      <p>
-        This project provides complete open documentation to build a
-        tricycle cargo bike. It includes CAD files, BOM, manuals,
-        technical drawings, certifications, and more.
-      </p>
-      <a class="btn" href="https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1" target="_blank">🔗 View on GitHub</a>
-    </section>
+  <div class="section">
+    <h2>🔧 مكونات المشروع</h2>
+    <ul>
+      <li><a href="../wiki/Technical-Description.md">الوصف التقني</a></li>
+      <li><a href="../wiki/Build-Instructions.md">تعليمات البناء</a></li>
+      <li><a href="../wiki/Bill-of-Materials.md">قائمة المواد (BOM)</a></li>
+      <li><a href="../wiki/CAD-Models.md">ملفات التصميم الهندسي</a></li>
+    </ul>
+  </div>
 
-    <section>
-      <h2>📂 Key Downloads</h2>
-      <ul>
-        <li><a href="../docs/User_Manual.pdf" target="_blank">User Manual (PDF)</a></li>
-        <li><a href="../docs/Assembly_Instructions.pdf" target="_blank">Assembly Instructions (PDF)</a></li>
-        <li><a href="../docs/Technical_Drawings.pdf" target="_blank">Technical Drawings (PDF)</a></li>
-        <li><a href="../CAD/Assembly1.stp" target="_blank">Assembly CAD (STP)</a></li>
-        <li><a href="../BOM/bom.csv" target="_blank">Bill of Materials (CSV)</a></li>
-        <li><a href="../cert/TSDC-certificate.yml" target="_blank">TSDC Certificate (YML)</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📸 Gallery</h2>
-      <img src="../images/photo1.jpg" alt="Photo 1" width="300" style="margin-right: 1rem;">
-      <img src="../images/photo2.jpg" alt="Photo 2" width="300">
-    </section>
-
-    <section>
-      <h2>🔎 OKH Metadata</h2>
-      <p><a href="../okh-manifest.yml" target="_blank">View Open Know-How Metadata</a></p>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Abdelkhalek Boucetta – Open Design Collective | License: CERN-OHL-S
-  </footer>
+  <div class="section">
+    <h2>📜 رخصة ومصادر</h2>
+    <p>مرخص بموجب <a href="https://cern-ohl.web.cern.ch/">CERN-OHL-S v2</a>، وجميع الملفات متاحة على <a href="https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original">GitHub</a>.</p>
+  </div>
 </body>
 </html>
