@@ -1,0 +1,14 @@
+okh-manifest-version: 1.0
+project:
+  name: Tricycle Cargo Bike Original
+  description: A sustainable, open source tricycle cargo bike designed for local manufacturing and assembly.
+  documentation-language: en
+  keywords: [cargo bike, tricycle, open hardware, sustainable transport]
+  version: 1.0.0
+  license: CERN-OHL-S-2.0
+  repository: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1
+  documentation-home: https://boucettaabdelkhalek2.github.io/Tricycle_Cargo_Bike_Original-1/
+  image: docs/Preview.png
+  manifest-author:
+    name: Abdelkhalek Bousta
+    email: boucettaabdelkhalek25@gmail.com
