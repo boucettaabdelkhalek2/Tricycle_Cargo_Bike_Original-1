@@ -2,6 +2,7 @@
 [![CERN-OHL-S](https://img.shields.io/badge/license-CERN--OHL--S-blue)](https://ohwr.org/project/cernohl)
 [![Docs](https://img.shields.io/badge/Documentation-Complete-brightgreen)](#)
 [![Status](https://img.shields.io/badge/Build-Passed-brightgreen)](#)
+[![DOI](https://zenodo.org/badge/1011780005.svg)](https://doi.org/10.5281/zenodo.15809255)
 # Tricycle Cargo Bike Original
 
 🚲 مشروع مفتوح المصدر لصناعة دراجة شحن ثلاثية العجلات بتصميم قابل للتجميع باستخدام أدوات محلية وبمواد مستدامة.
