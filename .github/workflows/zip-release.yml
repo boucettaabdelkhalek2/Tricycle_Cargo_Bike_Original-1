@@ -1,0 +1,19 @@
+name: Create ZIP Artifact
+
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create ZIP
+        run: zip -r artifact.zip .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: project-zip
+          path: artifact.zip

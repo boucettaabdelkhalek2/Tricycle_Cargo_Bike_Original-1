@@ -1,0 +1,7 @@
+certificate:
+  id: TSDC-2025-TRICYCLE
+  standard: DIN SPEC 3105 / DIN SPEC 3501
+  issuer: boucettaabdelkhalek2
+  project: Tricycle Cargo Bike Original
+  license: CERN-OHL-S
+  website: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1

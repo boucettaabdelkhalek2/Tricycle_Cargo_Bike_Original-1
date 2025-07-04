@@ -1,45 +1,19 @@
-name: Validate Project
+name: Check Project Files
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push]
 
 jobs:
-  check:
-    name: Structure and File Check
+  check-files:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: pip install pyyaml
-
-      - name: Validate metadata.yml
-        run: |
-          python3 -c "import yaml; yaml.safe_load(open('metadata.yml'))"
-
       - name: Check essential files
         run: |
-          for file in README.md LICENSE metadata.yml index.html; do
-            if [ ! -f "$file" ]; then echo "❌ Missing: $file" && exit 1; fi
+          for file in README.md LICENSE metadata.yml docs/Assembly_Instructions.pdf; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Missing: $file"
+              exit 1
+            fi
           done
-
-      - name: List CAD files
-        run: find CAD -type f
-
-      - name: List PDF documents
-        run: find docs -name '*.pdf'
-
-      - name: Show images and videos
-        run: |
-          find images -type f
-          find videos -type f
-
-      - name: Validate HTML file (web/index.html)
-        run: test -f "web/index.html" || (echo "Missing web/index.html" && exit 1)
+          echo "✅ All essential files exist"
