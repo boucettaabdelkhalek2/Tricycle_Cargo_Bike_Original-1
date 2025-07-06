@@ -1,19 +1,22 @@
-name: Check Project Files
+name: Project Validation
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
 
 jobs:
-  check-files:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repo
         uses: actions/checkout@v4
-      - name: Check essential files
+
+      - name: Validate Basic Files
         run: |
-          for file in README.md LICENSE metadata.yml docs/Assembly_Instructions.pdf; do
-            if [ ! -f "$file" ]; then
-              echo "❌ Missing: $file"
-              exit 1
-            fi
-          done
-          echo "✅ All essential files exist"
+          test -f README.md
+          test -f metadata.yml
+          test -f BOM.csv
+          test -d CAD
+          test -d docs
+          test -f docs/Assembly_Instructions.pdf
