@@ -1,18 +1,17 @@
 okh-manifest-version: 1.0.0
-project:
-  name: Tricycle Cargo Bike
-  description: دراجة ثلاثية لنقل البضائع - مفتوحة المصدر مع ملفات التصميم، دليل التجميع، و BOM.
-  version: 1.0.0
-  license: CERN-OHL-2.0
-  authors:
-    - name: Abdelkhalek Boucetta
-      email: boucettaabdelkhalek25@gmail.com
-  repository: https://github.com/boucettaabdelkhalek2/Tricycle_Cargo_Bike_Original-1
-  documentation-home: ./index.html
-  assets:
-    cad: ./CAD/
-    bom: ./BOM/
-    drawings: ./docs/Technical_Drawings.pdf
-    assembly-instructions: ./docs/Assembly_Instructions.pdf
-    user-manual: ./docs/User_Manual.pdf
-    media: ./images/
+name: Tricycle Cargo Bike
+description: Open-source cargo tricycle for local transport and sustainable delivery.
+project-link: https://github.com/boucettaabdelkhalek2/OHO-Tricycle-Cargo-Bike
+documentation-language: en
+licenses:
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+development-stage: released
+platforms:
+  - human-powered
+  - tricycle
+  - electric-optional
+release: 1.0.0
+organization: Boucetta Abdelkhalek / Open Source Hardware Community
+author: Boucetta Abdelkhalek
+image: images/Tricycle_Cargo_Bike_Front_View.jpg
+documentation-home: index.html
