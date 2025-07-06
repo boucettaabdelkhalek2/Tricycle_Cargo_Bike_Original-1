@@ -1,39 +1,22 @@
-name: Generate Build Provenance
+name: Project Validation
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  id-token: write
-  contents: read
+    branches: [ master ]
+  pull_request:
 
 jobs:
-  generate-provenance:
+  validate:
     runs-on: ubuntu-latest
-
     steps:
-    - name: ✅ جلب الكود
-      uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v4
 
-    - name: ✅ رفع المخرجات كـ Artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: project-files
-        path: |
-          index.html
-          metadata.yml
-          docs/**
-          CAD/**
-          LICENSE
-          README.md
-
-    - name: 🔐 توليد إثبات البناء
-      uses: actions/attest-build-provenance@v1
-      with:
-        subject-path: |
-          index.html
-          metadata.yml
-          docs/**
-          CAD/**
+      - name: Validate Basic Files
+        run: |
+          test -f README.md
+          test -f metadata.yml
+          test -f BOM.csv
+          test -d CAD
+          test -d docs
+          test -f docs/Assembly_Instructions.pdf
