@@ -17,6 +17,7 @@ An open-source, human-powered cargo tricycle designed for sustainable local tran
 ## 🔧 Build It Yourself
 
 All required files are provided to build this tricycle with basic fabrication tools or CNC machines. Follow the `docs/Assembly_Instructions.pdf`.
+ https://www.werkstatt-lastenrad.de/index.php?title=Lastenrad-Workshop_vom_20.-22._Januar_in_der_ODC
 
 ## 📜 License
 
