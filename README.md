@@ -5,7 +5,7 @@ An open-source, human-powered cargo tricycle designed for sustainable local tran
 ## 📂 Project Contents
 
 - `CAD/` – All STEP and DXF design files
-- `https://cdata.oho.wiki/images/d/d5/Wl_tcb_render1.jpg
+-  https://cdata.oho.wiki/images/d/d5/Wl_tcb_render1.jpg
 - `docs/` – Manuals, technical drawings, and reports in PDF
 - `images/` – Real photos and renders of the prototype
 - `BOM.csv` – Bill of materials for all components
